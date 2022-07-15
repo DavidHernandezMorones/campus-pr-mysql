@@ -1,0 +1,23 @@
+USE PerformanceReview;
+
+CREATE TABLE Users
+(
+    Id         INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    Name       VARCHAR(50) NOT NULL,
+    FechaNacimiento      DATE        NOT NULL,
+    Edad       INTEGER,
+    CreateDate DATE DEFAULT (CURRENT_DATE)
+);
+
+CREATE TABLE Role
+(
+    Id          INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    ProfileName VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE UserRole
+(
+    Id     INTEGER PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    IdUser INTEGER,
+    IdRole INTEGER
+);
